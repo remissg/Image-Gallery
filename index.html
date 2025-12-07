@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="search-container">
+        <input type="text" id="categorySearch" onkeyup="filterGallery()"
+            placeholder="Search by category (e.g., Nature, City, Food)...">
+    </div>
+
+    <div class="gallery-container">
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=" Sacred fig (Ficus religiosa), also known as the Bodhi tree" class="gallery-image"
+                data-category="Nature" onclick="openModal(this)">
+            <div class="category-label">Nature</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=952&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Two deer in front of Half Dome in Yosemite Valley during sunset" class="gallery-image"
+                data-category="Nature" onclick="openModal(this)">
+            <div class="category-label">Nature</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://plus.unsplash.com/premium_photo-1675827055694-010aef2cf08f?q=80&w=1012&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wailua Falls, a prominent landmark on the island of Kauai, Hawaii" class="gallery-image"
+                data-category="Nature" onclick="openModal(this)">
+            <div class="category-label">Nature</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fairy Glen, a unique and mystical landscape located near Uig on the Isle of Skye, Scotland. " class="gallery-image"
+                data-category="Nature" onclick="openModal(this)">
+            <div class="category-label">Nature</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1451303688941-9e06d4b1277a?q=80&w=1181&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A young fallow deer (Dama dama)" class="gallery-image"
+                data-category="Animals" onclick="openModal(this)">
+            <div class="category-label">Animals</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://plus.unsplash.com/premium_photo-1675432656807-216d786dd468?q=80&w=990&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Green sea turtle (Chelonia mydas) near the ocean's surface" class="gallery-image"
+                data-category="Animals" onclick="openModal(this)">
+            <div class="category-label">Animals</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1508144763612-c39d41eda06c?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sun parakeet (Aratinga solstitialis), also known as a sun conure" class="gallery-image"
+                data-category="Birds" onclick="openModal(this)">
+            <div class="category-label">Birds</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2l0eXxlbnwwfHwwfHx8MA%3D%3D" alt="New York, United States" class="gallery-image"
+                data-category="City" onclick="openModal(this)">
+            <div class="category-label">City</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://plus.unsplash.com/premium_photo-1669927131902-a64115445f0f?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chicago" class="gallery-image"
+                data-category="City" onclick="openModal(this)">
+            <div class="category-label">City</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://plus.unsplash.com/premium_photo-1672116452571-896980a801c8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Calgary, AB, Canada" class="gallery-image"
+                data-category="City" onclick="openModal(this)">
+            <div class="category-label">City</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1541480601022-2308c0f02487?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=" Twin-bell alarm clock" class="gallery-image"
+                data-category="Objects" onclick="openModal(this)">
+            <div class="category-label">Objects</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aW5kaWFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="Chicken Tikka Masala, served alongside naan bread" class="gallery-image"
+                data-category="Food" onclick="openModal(this)">
+            <div class="category-label">Food</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1617622141573-2e00d8818f3f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouthwatering Chowmein" class="gallery-image"
+                data-category="Food" onclick="openModal(this)">
+            <div class="category-label">Food</div>
+        </div>
+
+        <!-- Added images -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1625558185597-a44138cce398?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jangtaesan Mountain Natural Recreation Forest" class="gallery-image"
+                data-category="Nature" onclick="openModal(this)">
+            <div class="category-label">Nature</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1734964666750-5bfa6a642d6a?q=80&w=2103&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lake Crescent, located in Olympic National Park, Washington" class="gallery-image"
+                data-category="Nature" onclick="openModal(this)">
+            <div class="category-label">Nature</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1486365227551-f3f90034a57c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=" Common Kingfisher (Alcedo atthis)" class="gallery-image"
+                data-category="Birds" onclick="openModal(this)">
+            <div class="category-label">Birds</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Asiatic lion (Panthera leo leo)" class="gallery-image"
+                data-category="Animals" onclick="openModal(this)">
+            <div class="category-label">Animals</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1502964740190-e59d1e3dd8db?q=80&w=2142&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dubai, United Arab Emirates" class="gallery-image"
+                data-category="City" onclick="openModal(this)">
+            <div class="category-label">City</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1521794286957-348245b517a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="34 W 34th St, New York, United States" class="gallery-image"
+                data-category="City" onclick="openModal(this)">
+            <div class="category-label">City</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1530819568329-97653eafbbfa?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHlwZXdyaXRlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Vintage typewriter" class="gallery-image"
+                data-category="Objects" onclick="openModal(this)">
+            <div class="category-label">Objects</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGluZGlhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D" alt="Salmon Curry" class="gallery-image"
+                data-category="Food" onclick="openModal(this)">
+            <div class="category-label">Food</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://plus.unsplash.com/premium_photo-1709678337824-adc29e1b6b09?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFic3RyYWN0JTIwYXJjaGl0ZWN0dXJlfGVufDB8fDB8fHww" alt="Abstract architecture" class="gallery-image"
+                data-category="Abstract" onclick="openModal(this)">
+            <div class="category-label">Abstract</div>
+        </div>
+
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+
+        <img class="modal-content" id="img01" onclick="toggleZoom(this)">
+
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
